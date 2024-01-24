@@ -6,12 +6,13 @@
     <title>Update user</title>
 </head>
 <body>
-<form th:method="POST" th:action="@{/users/post_edit(id=${user.getId()})}" th:object="${user}">
+<form th:method="POST" th:action="@{/users/edit(id=${user.getId()})}" th:object="${user}">
     <label for="name">Enter name</label>
     <input type="text" th:field="*{name}" id="name"/>
-    <br/>
+    <br>
+    <br>
     <label for="sureName">Enter surname</label>
-    <input type="text" th:field="*{sureName}" id="sureName"/>
+    <input type="text" th:field="*{surname}" id="sureName"/>
     <br>
     <br>
     <input type="submit" value="Update!"/>

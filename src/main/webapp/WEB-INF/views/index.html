@@ -18,14 +18,14 @@
     <tr th:each="user : ${users}">
 
         <td th:width="70" th:align="center">
-            <a th:href="@{/users/find(id=${user.getId()})}" th:text="${user.getId()}">user</a>
+            <a th:href="@{/users/id(id=${user.getId()})}" th:text="${user.getId()}">user</a>
         </td>
         <td th:width="170" th:align="center">
-            <a th:href="@{/users/find(id=${user.getId()})}" th:text="${user.getName()} + ' ' + ${user.getSureName()}">user</a>
+            <a th:href="@{/users/id(id=${user.getId()})}" th:text="${user.getName()} + ' ' + ${user.getSurname()}">user</a>
         </td>
         <td th:width="100" th:align="center">
 
-            <a th:href="@{/users/user_edit(id=${user.getId()})}">Edit</a>
+            <a th:href="@{/users/update(id=${user.getId()})}">Edit</a>
 
             <a> or </a>
 
