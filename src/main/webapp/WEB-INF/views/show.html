@@ -2,8 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>User</title>
+<meta charset="UTF-8">
+<title>User</title>
 </head>
 <body>
 <p th:text="${user.getId()}">value</p>
@@ -13,7 +13,7 @@
 <br>
 <br>
 <form th:method="POST" th:action="@{/users/delete(id=${user.getId()})}">
-    <input type="submit" value="Delete"/>
+<input type="submit" value="Delete"/>
 </form>
 </body>
 </html>

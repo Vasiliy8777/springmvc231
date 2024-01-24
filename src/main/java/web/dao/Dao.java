@@ -5,13 +5,13 @@ import web.model.User;
 import java.util.List;
 
 public interface Dao {
-    List<User> getAllUsers();
+List<User> getAllUsers();
 
-    void addUser(User user);
+void addUser(User user);
 
-    void updateUser(User updatedUser);
+void updateUser(User updatedUser);
 
-    User getUserById(int id);
+User getUserById(int id);
 
-    void deleteUser(int id);
+void deleteUser(int id);
 }
