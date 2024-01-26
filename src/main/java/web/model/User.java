@@ -23,10 +23,9 @@ public class User {
     private String surname;
 
     @Column
-   // @NotEmpty(message = "Age should not be empty")
     @Max(value = 100, message = "Age should be less than 100")
     @Min(value = 0, message = "Age should be greater than 0")
-    private int age=0;
+    private int age = 0;
     @Column
     @Email(message = "Email should not be valid")
     @NotEmpty(message = "Email should not be empty")
