@@ -1,12 +1,8 @@
 package web.model;
 
 
-
 import javax.persistence.*;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
 
 @Entity
@@ -17,20 +13,21 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
-    @Column(name = "name")
-   @NotEmpty(message = "Name should not be empty")
-    @Size(min=2, max=50,message = "Name is too long")
+    @Column
+    @NotEmpty(message = "Name should not be empty")
+    @Size(min = 2, max = 30, message = "Name should be between 2 and 30 characters")
     private String name;
-    @Column(name = "surname")
+    @Column
     @NotEmpty(message = "Surname should not be empty")
-    @Size(min=2, max=50,message = "Surname is too long")
+    @Size(min = 2, max = 30, message = "Surname should be between 2 and 30 characters")
     private String surname;
 
-    @Column(name = "age")
-    @NotEmpty(message = "Age should not be empty")
+    @Column
+   // @NotEmpty(message = "Age should not be empty")
+    @Max(value = 100, message = "Age should be less than 100")
     @Min(value = 0, message = "Age should be greater than 0")
-    private int age;
-    @Column(name = "email")
+    private int age=0;
+    @Column
     @Email(message = "Email should not be valid")
     @NotEmpty(message = "Email should not be empty")
     private String email;

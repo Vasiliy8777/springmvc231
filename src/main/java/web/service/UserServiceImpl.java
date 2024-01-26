@@ -7,6 +7,7 @@ import web.dao.Dao;
 import web.model.User;
 
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Service
@@ -26,13 +27,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public void addUser(User user) {
+    public void addUser(@Valid User user) {
         dao.addUser(user);
     }
 
     @Override
     @Transactional
-    public void updateUser(User updatedUser) {
+    public void updateUser(@Valid User updatedUser) {
         dao.updateUser(updatedUser);
     }
 
