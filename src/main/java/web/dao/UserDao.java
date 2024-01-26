@@ -10,7 +10,6 @@ import javax.persistence.TypedQuery;
 import java.util.List;
 
 @Repository
-@Transactional(readOnly = true)
 public class UserDao implements Dao {
 
     @PersistenceContext
@@ -25,13 +24,11 @@ public class UserDao implements Dao {
     }
 
     @Override
-    @Transactional
     public void addUser(User user) {
         entityManager.persist(user);
     }
 
     @Override
-    @Transactional
     public void updateUser(User updatedUser) {
         entityManager.merge(updatedUser);
     }
@@ -44,7 +41,6 @@ public class UserDao implements Dao {
     }
 
     @Override
-    @Transactional
     public void deleteUser(int id) {
         entityManager.remove(getUserById(id));
     }

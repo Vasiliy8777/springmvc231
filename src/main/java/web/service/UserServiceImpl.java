@@ -10,7 +10,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @Service
-@Transactional
+@Transactional(readOnly = true)
 public class UserServiceImpl implements UserService {
     private final Dao dao;
 
@@ -25,11 +25,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
     public void addUser(User user) {
         dao.addUser(user);
     }
 
     @Override
+    @Transactional
     public void updateUser(User updatedUser) {
         dao.updateUser(updatedUser);
     }
@@ -40,6 +42,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
     public void deleteUser(int id) {
         dao.deleteUser(id);
     }
