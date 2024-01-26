@@ -8,21 +8,21 @@
 <body>
 <form th:method="POST" th:action="@{/users/create}">
 <label>Enter name</label>
-<input type="text" name="name" placeholder="Enter name"/>
+<input required pattern="^[a-zA-Z]+$" type="text" name="name" placeholder="Enter name"/>
 <br>
 <br>
 <label>Enter surname</label>
-<input type="text" name="surname" placeholder="Enter surname"/>
+<input required pattern="^[a-zA-Z]+$" type="text" name="surname" placeholder="Enter surname"/>
 <br>
 <br>
-    <label>Enter age</label>
-    <input type="text" name="age" placeholder="Enter age"/>
-    <br>
-    <br>
-    <label>Enter email</label>
-    <input type="text" name="email" placeholder="Enter email"/>
-    <br>
-    <br>
+<label>Enter age</label>
+<input required pattern="^[0-9][0-9]|[0-9]$" type="text" name="age" placeholder="Enter age"/>
+<br>
+<br>
+<label>Enter email</label>
+<input required type="text" name="email" placeholder="Enter email"/>
+<br>
+<br>
 <input type="submit" value="Create!"/>
 </form>
 </body>
