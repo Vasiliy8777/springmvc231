@@ -1,7 +1,13 @@
 package web.model;
 
+
+
 import javax.persistence.*;
-import java.util.Objects;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
 
 @Entity
 @Table(name = "users")
@@ -12,13 +18,21 @@ public class User {
     @Column(name = "id")
     private int id;
     @Column(name = "name")
+   @NotEmpty(message = "Name should not be empty")
+    @Size(min=2, max=50,message = "Name is too long")
     private String name;
     @Column(name = "surname")
+    @NotEmpty(message = "Surname should not be empty")
+    @Size(min=2, max=50,message = "Surname is too long")
     private String surname;
 
     @Column(name = "age")
+    @NotEmpty(message = "Age should not be empty")
+    @Min(value = 0, message = "Age should be greater than 0")
     private int age;
     @Column(name = "email")
+    @Email(message = "Email should not be valid")
+    @NotEmpty(message = "Email should not be empty")
     private String email;
 
     public User() {

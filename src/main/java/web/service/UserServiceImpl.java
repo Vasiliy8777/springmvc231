@@ -6,7 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 import web.dao.Dao;
 import web.model.User;
 
-import javax.validation.Valid;
+
 import java.util.List;
 
 @Service
