@@ -6,13 +6,13 @@ import javax.validation.Valid;
 import java.util.List;
 
 public interface UserService {
-List<User> getAllUsers();
+    List<User> getAllUsers();
 
-void addUser(User user);
+    void addUser(User user);
 
-void updateUser(User updatedUser);
+    void updateUser(User updatedUser);
 
-User getUserById(int id);
+    User getUserById(int id);
 
-void deleteUser(int id);
+    void deleteUser(int id);
 }

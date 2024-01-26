@@ -2,28 +2,28 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>New user</title>
+    <meta charset="UTF-8">
+    <title>New user</title>
 </head>
 <body>
 <form th:method="POST" th:action="@{/users/create}">
-<label>Enter name</label>
-<input required pattern="^[a-zA-Z]+$" type="text" name="name" placeholder="Enter name"/>
-<br>
-<br>
-<label>Enter surname</label>
-<input required pattern="^[a-zA-Z]+$" type="text" name="surname" placeholder="Enter surname"/>
-<br>
-<br>
-<label>Enter age</label>
-<input required pattern="^[0-9][0-9]|[0-9]$" type="text" name="age" placeholder="Enter age"/>
-<br>
-<br>
-<label>Enter email</label>
-<input required type="text" name="email" placeholder="Enter email"/>
-<br>
-<br>
-<input type="submit" value="Create!"/>
+    <label>Enter name</label>
+    <input required pattern="^[a-zA-Z]+$" type="text" name="name" placeholder="Enter name"/>
+    <br>
+    <br>
+    <label>Enter surname</label>
+    <input required pattern="^[a-zA-Z]+$" type="text" name="surname" placeholder="Enter surname"/>
+    <br>
+    <br>
+    <label>Enter age</label>
+    <input required pattern="^[0-9][0-9]|[0-9]$" type="text" name="age" placeholder="Enter age"/>
+    <br>
+    <br>
+    <label>Enter email</label>
+    <input required type="text" name="email" placeholder="Enter email"/>
+    <br>
+    <br>
+    <input type="submit" value="Create!"/>
 </form>
 </body>
 </html>
